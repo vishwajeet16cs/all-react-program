@@ -1,11 +1,11 @@
-import React from 'react';
-class App extends React.Component{
-  render(){
-	  
-    return(<>
-      
-        </>);
-  }
+import Raect from 'react';
+import Design from './component/Navbar'
+
+
+function App() {
+  return (
+    <Design/>
+  );
 }
 
 export default App;
