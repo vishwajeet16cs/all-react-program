@@ -1,6 +1,6 @@
 import React from 'react';
 
-function Add(){
+function HookIncrDecr(){
    var arr=0;
     const [name, setName] = React.useState(arr);
     const incr=()=>{ 
@@ -21,4 +21,4 @@ function Add(){
     </>
 }
 
-export default Add;
+export default HookIncrDecr;
