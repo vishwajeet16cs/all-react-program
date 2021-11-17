@@ -1,11 +1,15 @@
 
+import FirstComponents from './component/FirstComponent';
+import './App.css'
+import './index.css'
+// import PaginationJsonFile from './component/PaginationJsonFile';
 
-import Imageupdate from './component/Imageupdate';
 const App = () =>
  {
   return ( <>
-  <Imageupdate/>
-      {/* <FirstComponents/> */}
+
+  {/* <PaginationJsonFile/> */}
+      <FirstComponents/>
     </>
   
     );
