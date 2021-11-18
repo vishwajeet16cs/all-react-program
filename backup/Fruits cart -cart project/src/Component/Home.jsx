@@ -8,7 +8,7 @@ export default function Home() {
     return (
         <>
        
-        <h6>{JSON.stringify(data.productData)}</h6>
+        {/* <h6>{JSON.stringify(data.productData)}</h6> */}
          <h1  className="text-center mt-3">All Items</h1>
             <section className="py-4 container" >
               <div className=" row justify-content-center">
