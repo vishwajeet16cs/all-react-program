@@ -1,7 +1,7 @@
-// Root reducer
-import { combineReducers} from "redux";
-import { productReducer } from "./productReducer";
-const index = combineReducers({
-    allProducts:productReducer,
+import { combineReducers } from "redux";
+import { productsReducer, selectedProductsReducer } from "./productsReducer";
+const reducers = combineReducers({
+  allProducts: productsReducer,
+  product: selectedProductsReducer,
 });
-export default index;
+export default reducers;

@@ -1,16 +1,25 @@
-import React from 'react';
-import Header from './containers/Header'
-class App extends React.Component{
-  render(){
-	  
-    return(
-    <>
-        {/* <h1>hello people </h1> */}
-        <div className="App">
-          <Header/>
-        </div>
-    </>);
-  }
+import React from "react";
+// import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router,Route, Routes } from "react-router-dom";
+import ProductListing from "./containers/ProductListing";
+import Header from "./containers/Header";
+import "./App.css";
+import ProductDetails from "./containers/ProductDetails";
+
+function App() {
+  return (
+    <div className="App">
+      <Router>
+        {/* <Header />s */}
+        <Routes>
+           <Route path="/hello" exact component={ProductListing} />
+          <Route path="/" exact component={ProductListing} />
+          <Route path="/product/:productId" component={ProductDetails} />
+          <Route>404 Not Found!</Route>
+        </Routes>
+      </Router>
+    </div>
+  );
 }
 
 export default App;
