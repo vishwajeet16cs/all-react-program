@@ -1,0 +1,16 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.add{
+    background-color:gray  
+}
+.form-group{
+    align-items: center;
+    width: 100%;
+}
+.cover__img{
+    
+   max-width: 500px;
+}

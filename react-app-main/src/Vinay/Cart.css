@@ -1,0 +1,17 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+.col{
+    display:flex;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-left: 10px;
+    
+}
+
+.main__div{
+    margin-top:450px;
+    margin-bottom: 0px;
+}

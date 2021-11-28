@@ -1,0 +1,10 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+.card{
+    border-radius: 10px;
+}
+.card-heder img{
+border-radius: 10px;
+}

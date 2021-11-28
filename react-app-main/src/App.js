@@ -1,12 +1,16 @@
-import React from 'react';
-import PostForm from './API/PostForm';
-import PostLoist from './API/PostList';
-const App=()=>{
-  return(
-    <>
-    <PostForm/>
-      <PostLoist/>  
-    </>
-  )
+import React, { Component } from 'react';
+import Navbar from './Navbar';
+import Page from './PAGINATION/page';
+class App extends Component {
+    render() {
+        return (
+            <>
+            <h1>hello</h1>
+                <Navbar/>
+              <Page/>
+            </>
+        )
+    }
 }
-export default App;
+
+export default App
