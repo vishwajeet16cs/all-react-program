@@ -19,7 +19,6 @@ function App() {
     <div className="app">
       {/* <CompInfo/> */}
      {/* <Login/> */}
-     {/* <PostApi/> */}
      <Router>
        <Navbar/>
        <Switch>
@@ -29,7 +28,6 @@ function App() {
          <Route path="/post" component={PostApi}/>
        </Switch>
      </Router>
-     
      {/* {user?<Logout/>:<Login/>} */}
     </div>
   );

@@ -32,36 +32,14 @@
         <>
         {/* <h6>{JSON.stringify(data)}</h6> */}
             {/* <h1>hello check</h1> */}
-           {/*  <div className="container">
+            <div className="container">
                     <div className="row">
                         <div className="col">
                             
                         </div>
                     </div>
             </div>
-            {clickHandler} */}
-            
-            <table  className="table table-striped table-dark">
-                                <thead>
-                                <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Email</th>
-                                    <th>Address</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                    {data.map((ele)=>{
-                                        const {id,name,email,address}=ele;
-                                        return <tr key={id} onMouseOver={clickHandler.bind(this, ele)}>
-                                               <td>{id}</td>
-                                            <td>{name}</td>
-                                            <td>{email}</td>
-                                            <td>{address.city}</td>
-                                    </tr>
-                                    })}
-                                </tbody>
-                            </table>
+            {clickHandler}
         </>)
     }
     export default PostApi;
