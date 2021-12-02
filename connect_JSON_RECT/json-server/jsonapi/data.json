@@ -1,27 +1,21 @@
 {
   "employee": [
     {
-      "id": 1,
-      "name": "vishwajeet",
-      "mobile": "8809774814",
-      "dept": "IT",
-      "salary": "20000"
-    },
-    {
-      "name": "89789393929",
-      "mobile": "",
-      "dept": "cse",
-      "salary": "202020202020",
+      "name": "Amarjeet ",
+      "mobile": "989898989",
+      "dept": "civil",
+      "salary": "2000000",
       "id": 2
     },
     {
-      "name": "8809774829",
-      "mobile": "",
+      "name": "vishwa",
+      "mobile": "8809998989",
       "dept": "cse",
-      "salary": "2000000",
+      "salary": "30000000",
       "id": 3
     }
   ],
   "product": [],
-  "client": []
+  "client": [],
+  "material": []
 }

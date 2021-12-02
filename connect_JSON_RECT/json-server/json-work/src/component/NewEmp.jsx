@@ -22,6 +22,7 @@ const NewEmp=()=>{
     return(
         <>
         <div className="container">
+            <h5>{empmessage}</h5>
             <div className="row">
                 <div className="col">
                     <div className="card">
