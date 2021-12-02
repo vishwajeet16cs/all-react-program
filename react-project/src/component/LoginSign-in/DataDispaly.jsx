@@ -1,8 +1,8 @@
 import axios from 'axios';
 import React,{useState,useEffect} from 'react';
-import { Link } from 'react-router-dom';
-const EmployeeList=()=>{
-    const url="http://localhost:3002/employee"; 
+// import { Link } from 'react-router-dom';
+const dataDispaly=()=>{
+    const url="http://localhost:3002/product"; 
     const [emplist,updateEmp]=useState([]);
     const getEmp=()=>{
         fetch(url)
@@ -53,9 +53,9 @@ const EmployeeList=()=>{
                                 <tr>
                                     <td>{emp.id}</td>
                                     <td>{emp.name}</td>
-                                    <td>{emp.mobile}</td>
-                                    <td>{emp.dept}</td>
-                                    <td>{emp.salary}</td>
+                                    <td>{emp.email}</td>
+                                    <td>{emp.password}</td>
+                                    {/* <td>{emp.salary}</td> */}
                                     <td>
                                         
                                         <button className="btn btn-danger"
@@ -72,4 +72,4 @@ const EmployeeList=()=>{
         </>
     )
 }
-export default EmployeeList;
+export default dataDispaly;

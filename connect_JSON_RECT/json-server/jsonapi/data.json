@@ -1,21 +1,20 @@
 {
   "employee": [
     {
-      "name": "Amarjeet ",
-      "mobile": "989898989",
-      "dept": "civil",
-      "salary": "2000000",
-      "id": 2
-    },
-    {
-      "name": "vishwa",
-      "mobile": "8809998989",
+      "name": "vishwajeet kumar",
+      "mobile": "9090909098",
       "dept": "cse",
-      "salary": "30000000",
-      "id": 3
+      "salary": "387652456789",
+      "id": 1
     }
   ],
-  "product": [],
+  "product": [
+    {
+      "name":"vishwajeet",
+      "email":"vishwajeet@gmail.com",
+      "password":"change"
+    }
+  ],
   "client": [],
   "material": []
 }
