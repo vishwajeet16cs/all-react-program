@@ -10,7 +10,8 @@ const EmployeeList=()=>{
     //useEffect will call function automaticaly or else need to use button
     useEffect(()=>{
         getEmp();
-    })
+    }, [true])
+    //use true to stop server repeated execution
     return(
         <>
         {/* <h5>{JSON.stringify(emplist)}</h5> */}
