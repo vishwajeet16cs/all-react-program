@@ -7,6 +7,7 @@ const NewEmp=()=>{
     const [empsalary,setEmpSalary]=useState("");
     const [empmessage,setEmpMessage]=useState("");
     const save=()=>{
+        console.log("save method is workig")
         var newemp={
 
             "name":empname,
@@ -19,6 +20,7 @@ const NewEmp=()=>{
             setEmpMessage(empname + "save Successfull !")
         })
     }
+    // console.log("out side of return")
     return(
         <>
         <div className="container">

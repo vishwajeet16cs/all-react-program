@@ -6,13 +6,35 @@
       "dept": "cse",
       "salary": "387652456789",
       "id": 1
+    },
+    {
+      "name": "vishw",
+      "mobile": "1818181818818",
+      "dept": "cse",
+      "salary": "2999989",
+      "id": 2
+    },
+    {
+      "name": "amarjeet kumar",
+      "mobile": "8898776545",
+      "dept": "computer science",
+      "salary": "200000",
+      "id": 3
+    },
+    {
+      "name": "jeejeje",
+      "mobile": "",
+      "dept": "",
+      "salary": "",
+      "id": 4
     }
   ],
   "product": [
     {
-      "name":"vishwajeet",
-      "email":"vishwajeet@gmail.com",
-      "password":"change"
+      "id": 1,
+      "name": "vishwajeet",
+      "email": "vishwajeet@gmail.com",
+      "password": "change"
     }
   ],
   "client": [],
