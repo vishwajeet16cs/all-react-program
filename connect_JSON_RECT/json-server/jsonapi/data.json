@@ -36,8 +36,29 @@
       "email": "vishwajeet@gmail.com",
       "password": "change",
       "reEnterPassword": "change"
+    },
+    {
+      "name": "raj kumar",
+      "email": "raj@gmail.com",
+      "password": "qwert",
+      "reEnterPassword": "qwert",
+      "id": 2
+    },
+    {
+      "name": "Vishwajeet kumar",
+      "email": "vis@email.com",
+      "password": "ch",
+      "reEnterPassword": "ch",
+      "id": 3
+    },
+    {
+      "name": "Vishwajeet kumar",
+      "email": "vis@email.com",
+      "password": "ch",
+      "reEnterPassword": "ch",
+      "id": 4
     }
-  ],
+   ],
   "client": [],
   "material": []
 }
