@@ -34,7 +34,8 @@
       "id": 1,
       "name": "vishwajeet",
       "email": "vishwajeet@gmail.com",
-      "password": "change"
+      "password": "change",
+      "reEnterPassword": "change"
     }
   ],
   "client": [],

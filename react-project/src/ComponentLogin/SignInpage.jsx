@@ -1,5 +1,6 @@
 import axios from 'axios';
 import React,{useState,useEffect} from 'react'
+import './Sighin.css';
 
 const SignInpage = () => {
     const [name,setName]=useState("");
@@ -15,22 +16,41 @@ const SignInpage = () => {
             "password":password,
             "reEnterPassword":reEnterPassword,
         }
-        axios.post("http://localhost:3002/product",newEmp)
-        .then(responce=>{
-                setMessage(email+"save Successfull!")
-        })
-        console.log(Message)
+        
+         for(var i=0;i<=oldData.length;i++)
+         {    
+           
+              if(oldData[i].email===newEmp.email)
+              {
+                alert("this account already exist go to login Page");
+              }else
+              {
+                if(newEmp.password!==newEmp.reEnterPassword)
+                {
+                  alert("password miss match")
+              // console.log(Message)
+                }
+                else{
+                  axios.post("http://localhost:3002/product",newEmp)
+              .then(responce=>{
+                      setMessage(email+"save Successfull!")
+              })
+                }
+              }
+         }
+        
         // return <h4>{name} Welcome to web worlds</h4>
     }
-    const [oldData,setOldData]=useState("");
+    const [oldData,setOldData]=useState([]);
     useEffect(() => {
-      axios.get("").then((responce)=>{
+      axios.get("http://localhost:3002/product").then((responce)=>{
         setOldData(responce.data)
       })
-    }, [input])
+      console.log(oldData)
+    }, [])
     return (
         <div>
-          <h6>{JSON.stringify(oldData)}</h6>
+          <h6>data is here{JSON.stringify(oldData)}</h6>
             <div className="container">
                 <div className="row">
                     <div className="col">
@@ -41,25 +61,31 @@ const SignInpage = () => {
                           <input type="text" 
                             name="name" 
                             placeholder="Enter Name" 
-                            className="form-control "
+                            className="form-control inpbox "
+                            style={{backgroundColor:"#cbe7cb"}}
                             onChange={obj=>setName(obj.target.value)}/>
                         </div>
                         <div className="form-group">
                           <input type="email" name="email"
                             placeholder="Enter Email"
                             className="form-control"
+                            style={{backgroundColor:"#cbe7cb"}}
                             onChange={obj=>{setEmail(obj.target.value)}}  />
                         </div>
                         <div className="form-group">
+                        <label htmlFor="">Enter Password</label>
                           <input type="password" name="password"
                             // placeholder="Enter password"
-                            className="form-control"
+                            className="form-control inpbox"
+                            style={{backgroundColor:"#cbe7cb"}}
                             onChange={obj=>{setPassword(obj.target.value)}}  />
                         </div>
                         <div className="form-group">
+                          <label htmlFor="">ReEnter Password</label>
                           <input type="password" name="reEnterPassword"
                             // placeholder="Re-Enter password"
                             className="form-control"
+                            style={{backgroundColor:"#cbe7cb"}}
                             onChange={obj=>{setreEnterPassword(obj.target.value)}}  />
                         </div>
                         {/* <div className="form-group">

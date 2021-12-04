@@ -4,6 +4,7 @@ import Navbar from "./Navbar/Navbar";
 import { BrowserRouter, Route,Routes } from "react-router-dom";
 import SignInpage from "./ComponentLogin/SignInpage";
 import { Login } from "./ComponentLogin/Login";
+import { Home } from "./ComponentLogin/HomeComp/Home";
 
 
 
@@ -20,7 +21,7 @@ function App() {
         <Routes>
           <Route   path="signin" element={<SignInpage/> }/>
           {/* <Route   path="Login" element={<Login/> }/> */}
-          {/* <Route   path="home" element={<SignInpage/> }/> */}
+          <Route   path="home" element={<Home/> }/>
         </Routes>
     </BrowserRouter>
     
