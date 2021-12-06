@@ -9,7 +9,7 @@ export const RadioButton = () => {
     }
     return (
         <div>
-            
+            <h1>Radio Button</h1>
             <Radio color="primary"
                     value="male"
                  checked={gender==="male"}
