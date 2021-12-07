@@ -1,3 +1,4 @@
+import { BoxComponent } from "./component/BoxComponent";
 import ButtonEx from "./component/ButtonEx";
 import CheckBoxEx from "./component/CheckBox";
 import { GridEx } from "./component/GridEx";
@@ -13,6 +14,7 @@ function App() {
     <>
     
     <h1>Hello To Material UI</h1>
+    <BoxComponent/>
     <GridEx/>
     <SwitchEx/>
   <RangeSlider/>  
