@@ -1,18 +1,21 @@
 import React from "react";
 import { TextField } from "@material-ui/core";
-const TextField=()=>{
+const TextFieldEx=()=>{
     const getData=(e)=>{
         console.log(e.target.value)
     }
     return (
         <>
+        <h1 style={{color:"green"}}>hello Text Field</h1>
             <TextField
-                lable="enter name"// work as place holder
-                color="primary "
-                variant="outlined"
+                label="enter name"// work as place holder
+                color="secondary"
+                // variant="filled"
+                // variant="standard"
+                variant="outlined"//perfect text box
                 onChange={getData}
             />
         </>
     )
 }
-export default TextField;
+export default TextFieldEx;

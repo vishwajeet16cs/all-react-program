@@ -6,27 +6,6 @@
       "dept": "cse",
       "salary": "387652456789",
       "id": 1
-    },
-    {
-      "name": "vishw",
-      "mobile": "1818181818818",
-      "dept": "cse",
-      "salary": "2999989",
-      "id": 2
-    },
-    {
-      "name": "amarjeet kumar",
-      "mobile": "8898776545",
-      "dept": "computer science",
-      "salary": "200000",
-      "id": 3
-    },
-    {
-      "name": "jeejeje",
-      "mobile": "",
-      "dept": "",
-      "salary": "",
-      "id": 4
     }
   ],
   "product": [
@@ -67,6 +46,83 @@
       "password": "ch",
       "reEnterPassword": "ch",
       "id": 6
+    },
+    {
+      "name": "vishwajeet kumar",
+      "email": "vishwajeet@gmail.com",
+      "password": "1234",
+      "reEnterPassword": "1234",
+      "id": 7
+    },
+    {
+      "name": "vishwajeet kumar",
+      "email": "vishwajeet@gmail.com",
+      "password": "1234",
+      "reEnterPassword": "1234",
+      "id": 8
+    },
+    {
+      "name": "vishwajeet kumar",
+      "email": "vishwajeet@gmail.com",
+      "password": "1234",
+      "reEnterPassword": "1234",
+      "id": 9
+    },
+    {
+      "name": "vishwajeet kumar",
+      "email": "vishwajeet@gmail.com",
+      "password": "1234",
+      "reEnterPassword": "1234",
+      "id": 10
+    },
+    {
+      "name": "vishwajeet kumar",
+      "email": "vishwajeet@gmail.com",
+      "password": "1234",
+      "reEnterPassword": "1234",
+      "id": 11
+    },
+    {
+      "name": "vishwajeet kumar",
+      "email": "vishet@gmail.com",
+      "password": "123",
+      "reEnterPassword": "123",
+      "id": 12
+    },
+    {
+      "name": "vishwajeet kumar",
+      "email": "vishet@gmail.com",
+      "password": "123",
+      "reEnterPassword": "123",
+      "id": 13
+    },
+    {
+      "name": "vishwajeet kumar",
+      "email": "vishet@gmail.com",
+      "password": "123",
+      "reEnterPassword": "123",
+      "id": 14
+    },
+    {
+      "name": "vishwajeet kumar",
+      "email": "vishet@gmail.com",
+      "password": "123",
+      "reEnterPassword": "123",
+      "id": 15
+    },
+    {
+      "name": "vishwajeet kumar",
+      "email": "vishet@gmail.com",
+      "password": "123",
+      "reEnterPassword": "123",
+      "id": 16
+    },
+    {
+      "name": "vishwajeet kumar",
+      "email": "vishet@gmail.com",
+      "password": "123",
+      "reEnterPassword": "123",
+      "id": 17
     }
   ],
   "client": [],

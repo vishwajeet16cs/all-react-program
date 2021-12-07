@@ -16,13 +16,13 @@ const NewEmp=()=>{
         }
         axios.post("http://localhost:3002/employee",newemp)
         .then(response=>{
-            setEmpMessage(empname + "save Successfull !")
+            // setEmpMessage(empname + "save Successfull !")
         })
     }
     return(
         <>
         <div className="container">
-            <h5>{empmessage}</h5>
+            <h5>datat----{empmessage}</h5>
             <div className="row">
                 <div className="col">
                     <div className="card">

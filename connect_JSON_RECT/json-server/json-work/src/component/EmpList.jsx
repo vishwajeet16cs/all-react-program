@@ -26,9 +26,10 @@ const EmployeeList=()=>{
        .then(response=>{
         getEmp();// to reload the list after delete a record
             setMessage("Employee info Deleted successfully !")
-       }).catch(error=>{
-        setMessage("Error ! Try again later");
        })
+       /* .catch(error=>{
+        setMessage("Error ! Try again later");
+       }) */
 
     }
     return(
@@ -43,6 +44,7 @@ const EmployeeList=()=>{
                     <th>Mobile No</th>
                     <th>Department</th>
                     <th>Salary</th>
+                    {/* <th>Emp Image</th> */}
                     <th>Delete</th>
                 </tr>
             </thead>
@@ -56,6 +58,7 @@ const EmployeeList=()=>{
                                     <td>{emp.mobile}</td>
                                     <td>{emp.dept}</td>
                                     <td>{emp.salary}</td>
+                                    {/* <td><img src={emp.image} width="100px" alt="" /></td> */}
                                     <td>
                                         
                                         <button className="btn btn-danger"
