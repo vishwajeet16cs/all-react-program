@@ -12,7 +12,7 @@ const NewEmp=()=>{
             "name":empname,
             "mobile":empmobile,
             "dept":empDept,
-            "salary":empsalary,
+            "salary":empsalary, 
         }
         axios.post("http://localhost:3002/employee",newemp)
         .then(response=>{
