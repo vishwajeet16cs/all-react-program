@@ -12,24 +12,40 @@ import { SwitchEx } from "./component/SwitchEx";
 import TextFieldEx from "./component/TextField";
 import {MUICssInJs} from "./component/MUICssInJs"
 import {Typography} from '@material-ui/core'
+import { PaperEx } from "./component/PaperEx";
+import { ColorsUseMui } from "./component/ColorsUseMui";
+import { IconsEx } from "./component/IconsEx";
 
 function App() {
   return (
     <>
-    <Typography color="blue" variant="h2" align="center">Hello To Material UI World</Typography>
-    <Typography color="blue" variant="h4" align="center">Be Responsive And MAke Responsive</Typography>
+    <Typography color="primary" variant="h2" align="center">Hello To Material UI World</Typography>
+    <Typography color="blue" variant="h4" align="center">Be Responsive And Make Responsive</Typography>
     
     <ContainerEx/>
+    <hr/>
+    <ColorsUseMui/> 
+    <hr/>
+    <IconsEx/>
+    <hr/>
+    <PaperEx/>
+    <hr/>
     <MUICssInJs/>
+    <hr/>
     <BoxComponent/>
+    <hr/>
     <GridEx/>
+    <hr/>
     <SwitchEx/>
-  <RangeSlider/>  
+    <hr/>
+  <RangeSlider/>
+  <hr/>  
   <TextFieldEx/>
-    <SliderEx/>
-      <RadioButton/>
-    <CheckBoxEx/>
-      <ButtonEx/>
+  <hr/>
+    <SliderEx/><hr/>
+      <RadioButton/><hr/>
+    <CheckBoxEx/><hr/>
+      <ButtonEx/><hr/>
     </>
   );
 }
