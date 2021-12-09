@@ -15,6 +15,7 @@ import {Typography} from '@material-ui/core'
 import { PaperEx } from "./component/PaperEx";
 import { ColorsUseMui } from "./component/ColorsUseMui";
 import { IconsEx } from "./component/IconsEx";
+import { ButtonEx2M } from "./component/ButtonEx2M";
 
 function App() {
   return (
@@ -23,6 +24,8 @@ function App() {
     <Typography color="blue" variant="h4" align="center">Be Responsive And Make Responsive</Typography>
     
     <ContainerEx/>
+    <hr/>
+    <ButtonEx2M/>
     <hr/>
     <ColorsUseMui/> 
     <hr/>
