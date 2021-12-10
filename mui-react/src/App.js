@@ -20,6 +20,7 @@ import { UtilityFunction } from "./component/UtilityFunction";
 import { GridSysetm } from "./component/GridSystem";
 import { GridSysetm2 } from "./component/GredSystem2";
 import { FloatingActionButton } from "./component/FloatingActionButton";
+import { CardEx } from "./component/CardEx";
 
 function App() {
   return (
@@ -28,6 +29,8 @@ function App() {
     <Typography color="blue" variant="h4" align="center">Be Responsive And Make Responsive</Typography>
     
     <ContainerEx/>
+    <hr/>
+    <CardEx/>
     <hr/>
     <ButtonEx2M/>
     <hr/>

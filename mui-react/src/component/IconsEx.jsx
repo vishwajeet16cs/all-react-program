@@ -18,6 +18,7 @@ export const IconsEx = () => {
                     <Icon style={{fontSize:50, color:teal[900]}}>account_balance</Icon>
                     <Icon style={{fontSize:50, color:lime[900]}}>flutter_dash</Icon>
                     <Icon style={{fontSize:50}}>label_important</Icon>
+                    
                     <AccountBalance style={{color:teal[500], fontSize:50}}/>{/* other way to apply icone */}
                     <button className='btn btn-info mb-5' onClick={warnig}>Delete</button>
                     <AccountBalanceTwoTone style={{color:lime[500],fontSize:50}}/>
