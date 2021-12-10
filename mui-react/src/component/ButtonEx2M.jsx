@@ -14,7 +14,11 @@ export const ButtonEx2M = () => {
                     </Box>
                     <Box mt={4}>
                     <Button color="secondary" variant="contained" fullWidth
-                    size="large" startIcon={<Delete/>}>Read MOre</Button>
+                    size="large" >Read More</Button>
+                    </Box>
+                    <Box mt={4}>
+                    <Button mt={2} color="secondary" variant="contained" fullWidth
+                    size="large" startIcon={<Delete/>}>Delete</Button>   
                     </Box>
                 </Paper>
             </Container>

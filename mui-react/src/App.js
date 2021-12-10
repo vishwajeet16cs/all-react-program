@@ -16,6 +16,10 @@ import { PaperEx } from "./component/PaperEx";
 import { ColorsUseMui } from "./component/ColorsUseMui";
 import { IconsEx } from "./component/IconsEx";
 import { ButtonEx2M } from "./component/ButtonEx2M";
+import { UtilityFunction } from "./component/UtilityFunction";
+import { GridSysetm } from "./component/GridSystem";
+import { GridSysetm2 } from "./component/GredSystem2";
+import { FloatingActionButton } from "./component/FloatingActionButton";
 
 function App() {
   return (
@@ -26,6 +30,14 @@ function App() {
     <ContainerEx/>
     <hr/>
     <ButtonEx2M/>
+    <hr/>
+    <FloatingActionButton/>
+    <hr/>
+    <GridSysetm2/>
+    <hr/>
+    <GridSysetm/>
+    <hr/>
+    <UtilityFunction/>
     <hr/>
     <ColorsUseMui/> 
     <hr/>
