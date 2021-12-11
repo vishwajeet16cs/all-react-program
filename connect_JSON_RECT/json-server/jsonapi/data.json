@@ -29,6 +29,20 @@
       "email": "vishwajeet@gmail.com",
       "password": "change",
       "reEnterPassword": "change"
+    },
+    {
+      "name": "Vishwajeet kumar",
+      "email": "vishwajeetkumarb438@gmail.com",
+      "password": "1234",
+      "reEnterPassword": "1234",
+      "id": 2
+    },
+    {
+      "name": "Vishwajeet kumar",
+      "email": "vishwajeetkumarb438@gmail.com",
+      "password": "1234",
+      "reEnterPassword": "1234",
+      "id": 3
     }
   ],
   "client": [],

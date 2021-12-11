@@ -21,6 +21,7 @@ import { GridSysetm } from "./component/GridSystem";
 import { GridSysetm2 } from "./component/GredSystem2";
 import { FloatingActionButton } from "./component/FloatingActionButton";
 import { CardEx } from "./component/CardEx";
+import { TextFieldEx2 } from "./component/TextFieldEx2";
 
 function App() {
   return (
@@ -29,6 +30,8 @@ function App() {
     <Typography color="blue" variant="h4" align="center">Be Responsive And Make Responsive</Typography>
     
     <ContainerEx/>
+    <hr/>
+    <TextFieldEx2/>
     <hr/>
     <CardEx/>
     <hr/>
