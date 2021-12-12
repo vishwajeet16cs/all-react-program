@@ -6,26 +6,30 @@ export const Login = () => {
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
     const [Message,setMessage]=useState("");
-    const [fleg,setFleg]= useState(1);
+    const [flag,setFlag]= useState(0);
     useEffect(()=>{
       axios.get("http://localhost:3002/product").then(responce=>{
         setMessage(responce.data)
         // console.log(responce.data);
       })
-    })
+    },[])
     const submitHAndler=(event)=>{
         event.preventDefault();
         let i;
         for(i=0;i<Message.length;i++){
-          // console.log(password)
+          console.log(Message[i]. password)
             if(Message[i].email==email && Message[i].password==password){
-                
-            }
-            else{
-              alert("wrong email id or password")
+                setFlag(1)
             }
             
         }
+        console.log(flag)
+        // if(flag==0){
+        //   console.log("log in success full");
+        // }
+        // else{
+        //   alert("login un successfull");  
+        // }
         
     }
     return (

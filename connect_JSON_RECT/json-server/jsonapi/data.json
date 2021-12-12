@@ -43,8 +43,38 @@
       "password": "1234",
       "reEnterPassword": "1234",
       "id": 3
+    },
+    {
+      "name": "Vishwajeet kumar",
+      "email": "vishwejeet.1si16cs129@gmail.com",
+      "password": "1234",
+      "reEnterPassword": "1234",
+      "id": 4
+    },
+    {
+      "name": "Vishwajeet kumar",
+      "email": "vishwejeet.1si16cs129@gmail.com",
+      "password": "1234",
+      "reEnterPassword": "1234",
+      "id": 5
     }
   ],
-  "client": [],
+  "login": [
+    {
+      "email": "vi@g.com",
+      "password": "12345",
+      "id": 1
+    },
+    {
+      "email": "v@g.com",
+      "password": "1234",
+      "id": 2
+    },
+    {
+      "email": "v@g.com",
+      "password": "124",
+      "id": 3
+    }
+  ],
   "material": []
 }
