@@ -22,6 +22,8 @@ import { GridSysetm2 } from "./component/GredSystem2";
 import { FloatingActionButton } from "./component/FloatingActionButton";
 import { CardEx } from "./component/CardEx";
 import { TextFieldEx2 } from "./component/TextFieldEx2";
+import { RadioButtonEx } from "./component/inputComponent/RadioButtonEx";
+import { CheckBoxEx2 } from "./component/inputComponent/CheckBoxEx2";
 
 function App() {
   return (
@@ -32,6 +34,10 @@ function App() {
     <ContainerEx/>
     <hr/>
     <TextFieldEx2/>
+    <hr/>
+    <CheckBoxEx2/>
+    <hr/>
+    <RadioButtonEx/>
     <hr/>
     <CardEx/>
     <hr/>
