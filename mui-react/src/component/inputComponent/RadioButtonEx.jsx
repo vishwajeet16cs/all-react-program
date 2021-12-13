@@ -17,7 +17,7 @@ export const RadioButtonEx = () => {
         <div>
             <Container className={classes.root} pt={3}>
                 <Paper component={Box} p={4} mx="auto">
-                    <Box cpmponent="form" align="center">
+                    <Box component="form" align="center">
                         <FormControl> 
                             <FormLabel>Choose your Gender
                                 <RadioGroup value={gender} onChange={handleChange} row >

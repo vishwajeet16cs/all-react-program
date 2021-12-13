@@ -24,16 +24,22 @@ import { CardEx } from "./component/CardEx";
 import { TextFieldEx2 } from "./component/TextFieldEx2";
 import { RadioButtonEx } from "./component/inputComponent/RadioButtonEx";
 import { CheckBoxEx2 } from "./component/inputComponent/CheckBoxEx2";
-
+import { ListComp } from "./component/inputComponent/ListComp";
+import {TableMUI} from "./component/inputComponent/TableMUI"
 function App() {
   return (
     <>
     <Typography color="primary" variant="h2" align="center">Hello To Material UI World</Typography>
     <Typography color="blue" variant="h4" align="center">Be Responsive And Make Responsive</Typography>
     
+    <hr/>
     <ContainerEx/>
     <hr/>
     <TextFieldEx2/>
+    <hr/>
+    <ListComp/>
+    <hr/>
+    <TableMUI/>
     <hr/>
     <CheckBoxEx2/>
     <hr/>

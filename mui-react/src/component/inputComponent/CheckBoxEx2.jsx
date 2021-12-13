@@ -16,9 +16,11 @@ export const CheckBoxEx2 = () => {
     return (
         <div>
             <Container className={classes.root}>
+                {/* <h1>hello check</h1> */}
             <Typography varient="h4">Hello TO CheckBox Again</Typography>
             <Paper componet={Box} p={4} mx="auto">
-                <Typography varient="h3"> {remember?"true":"false"}</Typography>
+                <Typography variant="h6" component={Box} pl={3}> {remember?"true":"false"}</Typography>
+                {/* <Typography variant="h1" > {remember?"true":"false"}</Typography> */}
                 <Box pl={3} pt={1 } component="form" >
                     <FormControl>
                         <FormControlLabel label="Keep me remember" control={<Checkbox onChange={handleChange} checked={remember}/>}/>
