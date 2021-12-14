@@ -26,11 +26,15 @@ import { RadioButtonEx } from "./component/inputComponent/RadioButtonEx";
 import { CheckBoxEx2 } from "./component/inputComponent/CheckBoxEx2";
 import { ListComp } from "./component/inputComponent/ListComp";
 import {TableMUI} from "./component/inputComponent/TableMUI"
+import { Appbar } from "./component/inputComponent/Appbar";
+import {Box} from "@material-ui/core"
 function App() {
   return (
     <>
+    <Box mt={9}>
     <Typography color="primary" variant="h2" align="center">Hello To Material UI World</Typography>
     <Typography color="blue" variant="h4" align="center">Be Responsive And Make Responsive</Typography>
+    </Box>
     
     <hr/>
     <ContainerEx/>
@@ -38,6 +42,9 @@ function App() {
     <TextFieldEx2/>
     <hr/>
     <ListComp/>
+    <hr/>
+    <Appbar/>
+    {/* <h1>hello check</h1> */}
     <hr/>
     <TableMUI/>
     <hr/>
