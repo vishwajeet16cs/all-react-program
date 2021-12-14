@@ -6,7 +6,7 @@ export const Login = () => {
     const [email,setEmail]=useState("");
     const [password,setPassword]=useState("");
     const [Message,setMessage]=useState("");
-    const [flag,setFlag]= useState(0);
+    const [flag,setFlag]= useState(2);
     useEffect(()=>{
       axios.get("http://localhost:3002/product").then(responce=>{
         setMessage(responce.data)
@@ -19,11 +19,22 @@ export const Login = () => {
         for(i=0;i<Message.length;i++){
           console.log(Message[i]. password)
             if(Message[i].email==email && Message[i].password==password){
-                setFlag(1)
+                setFlag(1);
+                console.log("its true")
+                break;
+            }else{
+              setFlag(0)
+              console.log("tis false")
             }
+            // console.log("loop is break")
             
         }
-        console.log(flag)
+        // console.log("falg is changing"+flag)
+        if(flag==1){
+          alert("login successfull")
+        }else{
+          alert("invalid user id and password")
+        }
         // if(flag==0){
         //   console.log("log in success full");
         // }
@@ -32,8 +43,13 @@ export const Login = () => {
         // }
         
     }
+    /* const flagcheck=()=>{
+      setFlag(10)
+    } */
     return (
         <div>
+          {/* <button onClick={flagcheck}></button> */}
+          <h6>{JSON.stringify(flag)}</h6>
           <h6>{JSON.stringify(Message)}</h6>
           <h5>{JSON.stringify(email)}</h5>
           <h5>{JSON.stringify(password)}</h5>
