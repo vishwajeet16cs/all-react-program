@@ -53,6 +53,7 @@ export const Login = () => {
           <h6>{JSON.stringify(Message)}</h6>
           <h5>{JSON.stringify(email)}</h5>
           <h5>{JSON.stringify(password)}</h5>
+          <h6>{JSON.stringify(Message)}</h6>
             <div className="container">
               <div className="row">
                 <div className="col-md-8">

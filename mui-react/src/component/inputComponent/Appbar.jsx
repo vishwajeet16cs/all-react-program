@@ -8,15 +8,7 @@ export const Appbar = () => {
         <div>
             <Container>
                 {/* <Paper  > */}
-                    <AppBar color="primary">
-                        {/* by default it will come in the top */}
-                        <Toolbar>
-                        <Typography variant='h6'>MUI</Typography>
-                        <Button >Home</Button>
-                        <Button >About</Button>
-                        <Button >Contact</Button>
-                        </Toolbar>
-                    </AppBar>
+                   
                 {/* </Paper> */}
             </Container>
         </div>

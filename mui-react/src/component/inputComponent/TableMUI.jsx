@@ -10,7 +10,7 @@ const useStyles = makeStyles((theme)=>({
 }))
 export const TableMUI = () => {
     const classes=useStyles();
-    const [user,setUser] =useState([]); 
+    const [user,setUser] =useState([]                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   ); 
     const [page,setPage] = useState(0);
     const [rowsPerPage,setRowsPerPage] = useState(3);
     useEffect(()=>{
