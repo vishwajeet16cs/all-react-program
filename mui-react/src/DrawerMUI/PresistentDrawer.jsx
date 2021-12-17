@@ -1,8 +1,6 @@
 import React,{useState} from 'react'
-import {Button,AppBar,Toolbar,Typography,IconButton,Drawer,List,ListItem,ListItemText,CssBaseline,makeStyles,Icon} from '@material-ui/core'
-const drawerWidth=250;
+import { Box,Button,AppBar,Toolbar,Typography,IconButton,Drawer,List,ListItem,ListItemText,CssBaseline,makeStyles,Icon} from '@material-ui/core'
 const useStyles = makeStyles((theme)=>({
-    // theme -- search mui default theme obj-https://mui.com/customization/default-theme/
     menuButton:{
         marginRight:theme.spacing(2),
     },
@@ -13,28 +11,16 @@ const useStyles = makeStyles((theme)=>({
         padding:theme.spacing(3),
     },
     drawer:{
-        width:drawerWidth,  
-    },
-    appBar:{
-        // zIndex:1200,
-        zIndex:theme.zIndex.drawer + 1,
-    },
-    root:{
-        paddingLeft:drawerWidth , 
+        width:250,  
     }
 }));
-export const ClippedDrawer = () => {
+export const PresistentDrawer = () => {
     const classes= useStyles();
     const [open,setOpen]= useState(false)
     return (
-        <div className={classes.root}>
+        <div>
             <CssBaseline>
-                <Drawer open={open} onClose={()=>setOpen(false)} variant="permanent">
-                    {/* variant="permanent" fix the position */}
-                    {/* if thisn is over lap can be over come by zindex */}
-                    <Toolbar/>
-                    {/* it will over come the problem of over lapping */}
-                    {/* by providing appropriate height */}
+                <Drawer open={open} onClose={()=>setOpen(false)}>
                     <List disablPadding className={classes.drawer} >
                         <ListItem button>
                             <ListItemText primary="First Item"/>
@@ -45,18 +31,17 @@ export const ClippedDrawer = () => {
 
                     </List>
                 </Drawer>
-                <AppBar position="fixed" color="secondary" className={classes.appBar}>
+                <AppBar position="static" color="secondary">
                     <Toolbar>
-                          {/* <IconButton edge="start" className={classes.menuButton} color="inherit"
+                        <IconButton edge="start" className={classes.menuButton} color="inherit"
                         onClick={()=>setOpen(true)}>
                         <Icon style={{fontSize:50}}>menu</Icon>
-                        </IconButton> */}
+                        </IconButton>
                         <Typography variant='h6' className={classes.titile}>MUI❤️</Typography>
                         <Button color="inherit">Login</Button>
                     </Toolbar>
                 </AppBar>
                 <main className={classes.content}>
-                <Toolbar/>
                     <Typography variant='h2'>New Reactjs feature!</Typography>
                     <Typography align='justify'>
                         Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magnam error magni et temporibus labore ullam recusandae quis odio mollitia quibusdam! Optio pariatur a eveniet. Itaque expedita deleniti cum cupiditate explicabo assumenda quod officiis ipsam velit modi? Animi, voluptatibus voluptatum tempora non, dolorem aliquam iste deleniti impedit, recusandae soluta assumenda fugit.
