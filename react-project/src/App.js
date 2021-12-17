@@ -1,21 +1,27 @@
-import SignInpage from "./ComponentLogin/SignInpage";
-import Navbar from "./Navbar/Navbar";
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
-import { Login } from "./ComponentLogin/Login";
+// import logo from './logo.svg';
+import './App.css';
+import { BrowserRouter } from 'react-router-dom';
+import Navbar from './Navbar'
+// import GitIssue from './GitIssue.jsx';
+import AppRoutes from './routes';
 
 
 function App() {
   return (
     <>
-     
-     {/* <Login/> */}
-     <BrowserRouter>
-     <Navbar/>
-      <Routes>
-        <Route path="/sighin" element={<SignInpage />} />
-        <Route path="login" element={<Login/>} />
-      </Routes>
-    </BrowserRouter>
+
+        <>
+          <Navbar />
+          <BrowserRouter>
+    
+          <AppRoutes/>
+      
+          
+          </BrowserRouter>
+          {/* <GitIssue /> */}
+        </>
+    
+
     </>
   );
 }
