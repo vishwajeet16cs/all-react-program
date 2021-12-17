@@ -13,7 +13,6 @@ const GitIssue = () => {
   const rows =
     issues.length > 0 &&
     issues.map((data, index) => {
-      // console.log("hello check",body)
       return {
         id: index + 1,
         body: data.body ? data.body : "issue",

@@ -13,16 +13,15 @@ const  NavBar=()=> {
           <IconButton
             size="large"
             edge="start"
-            // color="inherit"
-            color="primary"
+            color="inherit"
             aria-label="menu"
             sx={{ mr: 2 }}
           >
               GitHub Issues
             {/* <MenuIcon /> */}
           </IconButton>
-          {/* <Typography color="primary" variant="h1" component="div" sx={{ flexGrow: 1 }}>
-          </Typography> */}
+          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+          </Typography>
         </Toolbar>
       </AppBar>
     </Box>

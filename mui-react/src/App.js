@@ -1,12 +1,12 @@
+// import { PresistentDrawer } from "./DrawerMUI/PresistentDrawer";
 import { ResponsiveDrawer } from "./DrawerMUI/ResponsiveDrawer";
 import { ClippedDrawer } from "./DrawerMUI/ClippedDrawer";
-import { PhoneDrawer } from "./DrawerMUI/PhoneDrawer";
-import { PresistentDrawer } from "./DrawerMUI/PresistentDrawer";
+// import { PhoneDrawer } from "./DrawerMUI/PhoneDrawer";
 // import { SimpleDrawer } from "./DrawerMUI/SimpleDrawer";
- function App() {
+function App() {
   return (
     <>
-    <PresistentDrawer/>
+    {/* <PresistentDrawer/> */}
     {/* <ResponsiveDrawer/> */}
     {/* <ClippedDrawer/> */}
     {/* <PhoneDrawer/> */}

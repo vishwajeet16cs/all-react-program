@@ -1,5 +1,6 @@
 import React from "react";
 class ContactDetails extends React.Component {
+  datanew =Object.keys(this.props.details)
   render() {
     return (
       <>
@@ -7,6 +8,7 @@ class ContactDetails extends React.Component {
         {/*  <pre>{JSON.stringify(this.props)}</pre> */}
         {Object.keys(this.props.details).length != 0 ? (
           <>
+          <h6>{JSON.stringify(this.datanew)}</h6>
             <div className="container">
               <div className="row">
                 <div className="col">

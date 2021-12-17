@@ -70,7 +70,7 @@ export const ResponsiveDrawer = () => {
                         onClick={()=>setOpen(true)}>
                         <Icon style={{fontSize:50}}>menu</Icon>
                         </IconButton>
-                        <Typography variant='h6' className={classes.titile}>MUI🕶️</Typography>
+                        <Typography variant='h6' className={classes.titile}>MUI 🕶️</Typography>
                         <Button color="inherit">Login</Button>
                     </Toolbar>
                 </AppBar>
