@@ -1,0 +1,49 @@
+source of api := https://www.themoviedb.org/settings/api
+source of project=
+https://www.youtube.com/watch?v=XtMThy8QKqU&t=410s
+
+1> api key 4f15987cb3266fec6bb926b24541bc8e
+API Key (v3 auth)
+
+
+Example API Request
+// check with post man bilow api
+
+2> https://api.themoviedb.org/3/movie/550?api_key=4f15987cb3266fec6bb926b24541bc8e
+
+
+
+// after checking in post man 
+http://www.foxmovies.com/movies/fight-club
+--- movies fight club url
+
+
+
+
+API Read Access Token (v4 auth)
+
+3>  eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiI0ZjE1OTg3Y2IzMjY2ZmVjNmJiOTI2YjI0NTQxYmM4ZSIsInN1YiI6IjYxYmU5OTA1ZTI0YjkzMDA0MmU4NzJiZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.hEDavaS5gdq21tJWxiFRTIDTO6mxB8PQbd0owliSF1k
+
+
+4>npm install -g firebase-tools
+
+
+You can deploy now or later. To deploy now, open a terminal window, then navigate to or create a root directory for your web app.
+
+Sign in to Google
+$ firebase login
+
+
+Initiate your project
+Run this command from your app’s root directory:
+
+$firebase init
+
+
+When you’re ready, deploy your web app
+Put your static files (e.g., HTML, CSS, JS) in your app’s deploy directory (the default is “public”). Then, run this command from your app’s root directory:
+
+$firebase deploy
+After deploying, view your app at netflix-clone-403f5.web.app
+
+Need help? Check out the Hosting docs
