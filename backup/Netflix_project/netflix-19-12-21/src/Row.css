@@ -1,0 +1,23 @@
+.row_posters {
+  display: flex;
+  overflow-y: hidden;
+  /* it will hide scroll bar oy y axis */
+  overflow-x: scroll;
+  padding: 20px;
+}
+.row_posters::-webkit-scrollbar {
+  display: none;
+}
+/* above code will remove scrollbar and but prop will be there we can scroll */
+.row__poster {
+  object-fit: contain;
+  width: 100%; /* take 100% width of screen */
+  max-height: 300px;
+  margin-right: 10px; /* give gap between poster*/
+  transition: transform 450ms;
+  /*  make it slow change of given time   */
+}
+.row__poster:hover {
+  transform: scale(1.15);
+  /* scale(size) on hover size of poster will increase by given size*/
+}
