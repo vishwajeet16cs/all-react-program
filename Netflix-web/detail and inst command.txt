@@ -2,7 +2,7 @@ source of api := https://www.themoviedb.org/settings/api
 source of project=
 https://www.youtube.com/watch?v=XtMThy8QKqU&t=410s
 
-1> api key 4f15987cb3266fec6bb926b24541bc8e
+1> api key  
 API Key (v3 auth)
 
 
@@ -10,7 +10,9 @@ Example API Request
 // check with post man bilow api
 
 2> https://api.themoviedb.org/3/movie/550?api_key=4f15987cb3266fec6bb926b24541bc8e
-
+		axios.js firle
+       url used --> https://api.themoviedb.org/3/
+	extracted from above url 2>	
 
 
 // after checking in post man 
@@ -43,7 +45,14 @@ $firebase init
 When you’re ready, deploy your web app
 Put your static files (e.g., HTML, CSS, JS) in your app’s deploy directory (the default is “public”). Then, run this command from your app’s root directory:
 
-$firebase deploy
+$ firebase deploy
 After deploying, view your app at netflix-clone-403f5.web.app
 
 Need help? Check out the Hosting docs
+
+
+step 1 create request.js
+request r should be samll 
+only component file name should start with uppwer case R
+for easy understanding
+
