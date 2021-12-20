@@ -1,6 +1,6 @@
 import axios from 'axios';
 import React,{useState,useEffect} from 'react';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';//for edit purpous
 const EmployeeList=()=>{
     const url="http://localhost:3002/employee"; 
     const [emplist,updateEmp]=useState([]);
@@ -22,7 +22,7 @@ const EmployeeList=()=>{
     const [message, setMessage] =useState("");
     const deleteEmp=(empid)=>{
         console.log("delete emp is working")
-               axios.delete("http://localhost:3002/employee/"+empid)
+               axios.delete("http://localhost:3002 /employee/"+empid)
        .then(response=>{
         getEmp();// to reload the list after delete a record
             setMessage("Employee info Deleted successfully !")
@@ -45,6 +45,7 @@ const EmployeeList=()=>{
                     <th>Department</th>
                     <th>Salary</th>
                     {/* <th>Emp Image</th> */}
+                    <th>Edit</th>
                     <th>Delete</th>
                 </tr>
             </thead>
@@ -59,8 +60,8 @@ const EmployeeList=()=>{
                                     <td>{emp.dept}</td>
                                     <td>{emp.salary}</td>
                                     {/* <td><img src={emp.image} width="100px" alt="" /></td> */}
+                                    <td><Link to={`/${emp.id}editemp`} className='btn btn-info '>Edit</Link></td>
                                     <td>
-                                        
                                         <button className="btn btn-danger"
                                      onClick={deleteEmp.bind(this,emp.id)}>
                                          Delete</button></td>

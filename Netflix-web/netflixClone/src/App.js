@@ -1,9 +1,14 @@
 import Row from "./Row";
 import requests from "./request";
+import Banner  from "./Banner";
 import "./App.css"
 function App() {
   return (
     <>
+      <div>
+        {/* navbar */}
+        {/* Banner */}
+        <Banner/>
         <Row title="NETFLIX ORIGINALS" fetchUrl={requests.fetchNetflixOriginals}
         isLargeRow />
         <Row title="Treanding Now" fetchUrl={requests.fetchTrending}/>
@@ -13,6 +18,7 @@ function App() {
         <Row title="Horror Movies" fetchUrl={requests.fetchHorrorMovies}/>
         <Row title="Romance Movies" fetchUrl={requests.fetchRomanceMovies}/>
         <Row title="Documentation" fetchUrl={requests.fetchDocumentaries}/>
+      </div>
     </>
   );
 }

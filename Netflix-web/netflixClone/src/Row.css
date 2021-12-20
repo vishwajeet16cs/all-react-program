@@ -1,3 +1,6 @@
+.row {
+  margin-left: 20px;
+}
 .row_posters {
   display: flex;
   overflow-y: hidden;
@@ -12,16 +15,21 @@
 .row__poster {
   object-fit: contain;
   width: 100%; /* take 100% width of screen */
-  max-height: 200px;
+  max-height: 150px;
   margin-right: 10px; /* give gap between poster*/
   transition: transform 450ms;
   /*  make it slow change of given time   */
 }
 .row__poster:hover {
-  transform: scale(1.15);
+  transform: scale(1.08);
   /* scale(size) on hover size of poster will increase by given size*/
 }
 
-.roe__posterLarge {
+.row__posterLarge {
   max-height: 300px;
+  /* transform: scale(1.15); */
+}
+.row__posterLarge:hover {
+  transform: scale(1.15);
+  transition: transform 500ms;
 }

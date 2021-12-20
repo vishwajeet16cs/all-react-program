@@ -33,7 +33,7 @@ const NewEmp=()=>{
                            className="form-control" 
                            placeholder="Emp Name"/>
                        </div>
-                       <div className="from-group">
+                       <div className="from-group pt-2">
                            <input type="number"
                            className="form-control my-3 " 
                            onChange={obj=>setEmpMobile(obj.target.value)}
@@ -41,7 +41,7 @@ const NewEmp=()=>{
                        </div>
                        <div className="from-group my-3">
                            <input type="text"
-                           className="form-control" 
+                           className="form-control my2" 
                            onChange={obj=>setEmpDept(obj.target.value)}
                            placeholder="Emp Department"/>
                        </div>
