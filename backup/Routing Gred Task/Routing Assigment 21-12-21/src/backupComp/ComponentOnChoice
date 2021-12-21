@@ -1,0 +1,8 @@
+import React, { useEffect, useState } from 'react'
+const ComponentOnChoice = (props) => {
+    let data=props.selectedData
+    const [data,setData]=useState({})
+   return <><pre>h</pre>
+   <h6>{JSON.stringify(data)}</h6></>
+}
+export {ComponentOnChoice}
