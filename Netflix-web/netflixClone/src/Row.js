@@ -3,13 +3,17 @@
 import React, { useState,useEffect} from 'react';
 import axios from './axios'
 import requests from './request';
-import "./Row.css"
-// axios - file is default export so we can change the name from instance to axios
+import "./Row.css" ;
+import YouTube from 'react-youtube';// for playing trailer
+import moviesTrailer from 'movie-trailer'// for playing trailer
+ // axios - file is default export so we can change the name from instance to axios
 
 const base_url= "https://image.tmdb.org/t/p/original/"
 // function Row({title}) {--title is nothing but destructurnig of props we get 
 function Row({title,fetchUrl,isLargeRow}) {
     const [movies,setMovies]=useState([]);
+    const [trailerUrl,setTrailerUrl]= useState("")
+    //https://www.youtube.com/watch?v=JfVOs4VSpmA
     useEffect(()=>{
         // console.log("row comp useEffent check")
         // async because data come form TPS don't know exact what time it will take
@@ -28,7 +32,8 @@ function Row({title,fetchUrl,isLargeRow}) {
 
         }
         fetchData();
-    },[fetchUrl]) 
+    },[fetchUrl])
+    console.log("Row check movies",movies) 
     //[fetchUrl]--> if it change useEffect need to rerender the code 
     // we are getting data from outer source 
     //[]=> konwns as dependency
@@ -38,10 +43,30 @@ function Row({title,fetchUrl,isLargeRow}) {
     // console.log("table below check")
     // console.log(isLargeRow)
     // console.table(movies)
+    const opts={
+        height:"390",
+        width:"100%",
+        playerVars:{
+            autoplay:1,
+        },
+    }
+    const handleClick=(movie)=>{
+        if(trailerUrl){
+            setTrailerUrl('');
+        }else{
+            moviesTrailer(movie?.name||"")
+            .then(url=>{
+                const urlParams = new URLSearchParams(new URL(url).search);
+                setTrailerUrl(urlParams.get('v'));
+            }).catch(error=>console.log("doesn't find trailer error"));
+        }
+    }
     return (
         <div className="row">
             <h2>{title}</h2>{/* getting props from app.js */} 
-
+            {/* <h3>url--{trailerUrl}</h3> */}
+            {/* <h6>{JSON.stringify(movies[0])}</h6> */}
+            {/* <h6>{JSON.stringify()}</h6> */}
                 <div className='row_posters'>
                         {movies.map((movie)=>{
                             return <>
@@ -50,15 +75,17 @@ function Row({title,fetchUrl,isLargeRow}) {
                             key={movie.id}// key make slightly web faster small optimization   
                             className={`row__poster ${isLargeRow && "row__posterLarge"}`} 
                             src={`${base_url}${isLargeRow?movie.poster_path:movie.backdrop_path}`} 
-                            alt={movie.name}/>
+                            alt={movie.name}
+                            onClick={()=>handleClick(movie)}/>
                             {/* <img
-                            key={movie.id}// key make slightly web faster small optimization   
+                            key={movie.z}// key make slightly web faster small optimization   
                             className='row__poster' 
                             src={`${base_url}${movie.poster_path}`} 
                             alt={movie.name}/> */}
                             </>
                         })}
                 </div>
+               {trailerUrl &&  <YouTube videoId={trailerUrl} opts={opts}/>}
 
             {/* container-> posters */}
             
