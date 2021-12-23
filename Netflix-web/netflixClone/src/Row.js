@@ -51,11 +51,18 @@ function Row({title,fetchUrl,isLargeRow}) {
         },
     }
     const handleClick=(movie)=>{
+        console.log("handle click is",movie,"trailer url",trailerUrl)
         if(trailerUrl){
+            console.log("movie name if--",movie.name)
             setTrailerUrl('');
-        }else{
+            console.log("inSide if",trailerUrl)
+        }
+        // if trailerUrl is open -setTrailerUrl('')-close the trailer  onclick
+        else{
+            console.log("inElse if",trailerUrl)
             moviesTrailer(movie?.name||"")
             .then(url=>{
+                console.log("movie name else",movie.name)
                 const urlParams = new URLSearchParams(new URL(url).search);
                 setTrailerUrl(urlParams.get('v'));
             }).catch(error=>console.log("doesn't find trailer error"));
@@ -86,7 +93,7 @@ function Row({title,fetchUrl,isLargeRow}) {
                         })}
                 </div>
                {trailerUrl &&  <YouTube videoId={trailerUrl} opts={opts}/>}
-
+                        <h1>{trailerUrl}</h1>
             {/* container-> posters */}
             
         </div>
