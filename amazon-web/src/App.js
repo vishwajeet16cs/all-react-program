@@ -3,7 +3,7 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      {/* Amazon web*/}
+      <h1>Let's build AMAZON Clone with React JS🚀</h1>
     </div>
   );
 }

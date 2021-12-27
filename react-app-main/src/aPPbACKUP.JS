@@ -1,22 +1,9 @@
-// import React from 'react';
-// import "./App.css"
-// import CurrencyDisplay from './CurrencyDisplay';
-// export const App = () => {
-//   return (
-//     <div>
-//       <CurrencyDisplay/>
-//     </div>
-//   )
-// }
-// export default App;
 import CurrencyRow from "./CurrencyRow";
 import React,{useEffect, useState} from "react";
 import "./App.css"
 const BASE_URL="http://api.exchangeratesapi.io/v1/latest?access_key=a1f669702564872c8049125cb8e078d0";
 const App=()=>{
   const [currencyOptions,setCurrencyOptions] = useState([])
-  // const [currencyOptions,setCurrencyOptions] = useState([])
-  console.log("currencyOption",currencyOptions)
   const [fromCurrency,setFromCurrency]= useState();
   const [toCurrency,setToCurrency]= useState();
   const [exchangeRate,setExchangerate] =useState();
@@ -37,7 +24,7 @@ const App=()=>{
     .then(res=>res.json())
     .then(data=>{
       const firstcurrency = Object.keys(data.rates)[1]
-      setCurrencyOptions([data.tates,... Object.keys(data.rates)])
+      setCurrencyOptions([data.base,... Object.keys(data.rates)])
       setFromCurrency(data.base)
       setToCurrency(firstcurrency)
       setExchangerate(data.rates[firstcurrency])

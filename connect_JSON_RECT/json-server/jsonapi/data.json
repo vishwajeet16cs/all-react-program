@@ -34,12 +34,12 @@
   "login": [
     {
       "email": "vi@g.com",
-      "password": "12345",
+      "password": "123456",
       "id": 1
     },
     {
       "email": "v@g.com",
-      "password": "1234",
+      "password": "12134",
       "id": 2
     },
     {

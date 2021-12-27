@@ -11,7 +11,7 @@
          async function fetchData(){
                 console.log("async function check")
                 const request = await axios.get(requests.fetchNetflixOriginals);    
-                // console.log("hello check")
+                console.log("hello check",request.data)
                 // console.log(request.data.results[Math.floor(Math.random()*request.data.results.length-1)])
                 setMovie(request.data.results[Math.floor(Math.random()*request.data.results.length-1)])  
                 // for renodm data selection from api array
