@@ -2,21 +2,20 @@
 import {Link, Route, Routes } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import './App.css';
+import AddContact from './Component/AddContact';
+import EditComponent from './Component/EditComponent';
+import Home from './Component/Home';
 import Navbar from './Component/Navbar';
 const App=()=>{
   return (
     <div className="App">
-      <div className="container">
-        <div className="row">
-          <div className="col-md-12 text-right px-5">
-            <Link to='/add' className='btn btn-outline-dark'>Add Contact</Link>
-          </div>
-          <div className="col-md-6 mx-auto">
-            <h1>Welcome to React world</h1>
-          </div>
-        </div>
-      </div>
-    
+      {/* <AddContact/>  */}            
+      <Navbar/>
+      <Routes>
+      <Route exact path="/" element={<Home/>}/>
+      <Route exact path="/add" element={<AddContact/>}/>
+      <Route exact path="/edit/:id" element={<EditComponent/>}/>
+      </Routes>
     </div>
   );
 }
