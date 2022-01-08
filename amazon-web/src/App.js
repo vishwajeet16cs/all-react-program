@@ -1,14 +1,13 @@
 import React from 'react'
-import UseMemoNuse from './useMemo/UseMemoNuse';
-import UseMemoUse from './useMemo/UseMemoUse';
 
 const App = () => {
   return (
-    <div>
-      <h6>for mopare both comp check console console.log();</h6>
-      <UseMemoUse/>
-      <UseMemoNuse/>
-    </div>
+    <>
+        <div className="App">
+          <h1>Let's boild an AMAZON Clone with React js🚀</h1>
+          <h1>Hello world</h1>
+        </div>
+    </>
   )
 }
 export default App;

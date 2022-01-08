@@ -34,7 +34,7 @@ const NewEmp=()=>{
                        {/* <div className="from-group pt-2">
                            <input type="text"
                            className="form-control my-3 " 
-                           onChange={obj=>setComment(obj.target.value)}
+                           onChange={obj=>setComment(o  bj.target.value)}
                            placeholder="Comment"/>
                        </div> */}
                        <div className="from-group pt-2">
