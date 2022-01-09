@@ -6,7 +6,7 @@ const EditComponent = () => {
     return (
         <div>
             <div className="container">
-                     <h1 className="dispaly-3 text-center my-4"> Edit Student  </h1>
+                     <h1 className="dispaly-3 text-center my-4"> Edit Student {id} </h1>
                  <div className="row my-4">
                      <div className="col-md-6 mx-auto p-5  ">
                      <div className="col-md-6 shadow mx-auto">
@@ -21,7 +21,7 @@ const EditComponent = () => {
                                 <input type="number" placeholder='Phone Numbar' className='form-control'/>
                             </div>
                             <div className="form-group">
-                                <input type="submit" value="Add Student" className='btn btn-block btn-dark'/>
+                                <input type="submit" value="Update Student" className='btn btn-block btn-dark'/>
                                 <Link to="/" value="Add Student" className='btn btn-danger ml-3'>Cancle </Link>
                             </div>
                         </form>
