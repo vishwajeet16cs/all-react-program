@@ -13,6 +13,7 @@ const TodoList = ()=>{
     const saveData=(e)=>{
         e.preventDefault();
         setId(id+1)
+        console.log(planned )
         const giveninput={
             id:id,
             name:name,
@@ -25,7 +26,7 @@ const TodoList = ()=>{
 
         }
         const numArr=[...number]
-        if(name&&email&&number&&project&&start&&finish&&planned){
+        // if(name&&email&&number&&project&&start&&finish&&planned){
             if(numArr[0]==0||number.length!==10){
                 alert("number not valid")
             }else{
@@ -41,10 +42,10 @@ const TodoList = ()=>{
                 }
             }
             
-        }
-        else{
-            alert("all box need to be filled")
-        }
+        // // }
+        // else{
+        //     alert("all box need to be filled")
+        // }
     }
     // console.log(tableData)
     const deleteHandler = (index) =>{
@@ -81,7 +82,7 @@ const TodoList = ()=>{
                      <input type="date" placeholder='Target Date'
                     className="mt-4" onChange={e=>setFinish(e.target.value)}/>
                     <br />
-                    <label htmlFor="" className='mr-4'>Task Status</label>
+                    {/* <label htmlFor="" className='mr-4'>Task Status</label>
                      <input type="radio" placeholder='Target Date'
                     className="mr-4" name="Planned" onChange={e=>setPlaned(e.target.name)}/>
                      <input type="radio" placeholder='Target Date'
@@ -91,7 +92,20 @@ const TodoList = ()=>{
                      name="Done"
                      placeholder='Target Date'
                     className="mt-4" onChange={e=>setPlaned(e.target.value)}/>
-                    <br />
+                    <br /> */}
+                    <div class="form-check form-check-inline">
+  <input className="form-check-input" data="lable1" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"
+         onChange={e=>setPlaned("Planned")}/>
+  <label className="form-check-label"  for="inlineRadio1">lable1</label>
+</div>
+<div className="form-check form-check-inline">
+  <input className="form-check-input" data="lable2" type="radio" onChange={e=>setPlaned("In-Progress")} name="inlineRadioOptions" id="inlineRadio2" value="option2" />
+  <label className="form-check-label" for="inlineRadio2">lable2</label>
+</div>
+<div className="form-check form-check-inline">
+  <input className="form-check-input" data="lable3" type="radio" onChange={e=>setPlaned("done")} name="inlineRadioOptions" id="inlineRadio3" value="option3" /> 
+  <label className="form-check-label" for="inlineRadio3">lable3</label>
+</div>
                    {/* //---------- */}
                    <button className='mt-4' type="submit">save</button>
                 </form>
@@ -120,7 +134,7 @@ const TodoList = ()=>{
                             <tbody>
                                 {tableData.map((ele,index)=>{
                                         return (
-                                            <tr key={index+1}>
+                                            <tr key={index++}>
                                                  <td>{index}</td>
                                                  <td>{ele.name}</td>
                                                  <td>{ele.project}</td>
