@@ -12,9 +12,9 @@ import React from 'react';
      errors.firstName = 'Must be 15 characters or less';
    }
  
-   if (!values.lastName||!/^[a-zA-Z]+$/i.test(values.
+   if (!values.lastName||!/^[a-zA-Z]+$/.test(values.
     lastName)) {
-     errors.lastName = 'Required';
+     errors.lastName = 'number ';
    } else if (values.lastName.length > 20) {
      errors.lastName = 'Must be 20 characters or less';
    }

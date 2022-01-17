@@ -1,9 +1,19 @@
 .invalid {
-  border:1px solid red !important;
- }
- input, textarea {
+  border: 1px solid red !important;
+}
+input,
+textarea {
   outline: none !important;
-  box-shadow: none !important; 
+  box-shadow: none !important;
 }
 
- 
+.App {
+  background-color: #000058;
+  color: azure;
+}
+
+.error {
+  position: absolute;
+  color: red;
+  font-size: 0.6rem;
+}

@@ -9,26 +9,10 @@ const TodoList = ()=>{
     const [finish,setFinish] = useState("");
     const [planned,setPlaned] = useState("");
     const [id,setId] =useState(0)
-    const [Flage,setFlage] =useState(0)
     const [tableData,setTableData] = useState([])
-    console.log(name,email,number)
-    const namevalidation =()=>{
-        const newName=[...name]
-        let i;
-        let count=0;
-        let final=newName.reduce((ele)=>{
-            console.log("ele ->",ele)
-            if(!isNaN(ele)){
-                            return  count=count+1
-                        }
-        })
-        setFlage(final)
-        
-    }
     const saveData=(e)=>{
         e.preventDefault();
         setId(id+1)
-        namevalidation();
         const giveninput={
             id:id,
             name:name,
@@ -41,19 +25,31 @@ const TodoList = ()=>{
 
         }
         const numArr=[...number]
-        // name||email||number||project||start||finish||planned?
-        if(numArr[0]==0||number.length!==10){
-            alert("number not valid")
-        }else{
-            // console.log(numArr)
-        setTableData([...tableData,giveninput])
+        if(name&&email&&number&&project&&start&&finish&&planned){
+            if(numArr[0]==0||number.length!==10){
+                alert("number not valid")
+            }else{
+                // console.log(numArr)
+                if (!/^[a-zA-Z ]+$/.test(name)){
+                    alert("invalid name")
+                }else{
+                    if(!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i.test(email)){
+                        alert("invalid email");
+                    }else{
+                        setTableData([...tableData,giveninput])
+                    }
+                }
+            }
+            
         }
-        
+        else{
+            alert("all box need to be filled")
+        }
     }
     // console.log(tableData)
     const deleteHandler = (index) =>{
         const updateItem = tableData.filter((cur)=>{
-            // console.log("cure ",cur)
+            console.log("inside delete",index)
             return cur.id!==index;
         })
         setTableData(updateItem)
@@ -124,8 +120,8 @@ const TodoList = ()=>{
                             <tbody>
                                 {tableData.map((ele,index)=>{
                                         return (
-                                            <tr key={index}>
-                                                 <td>{ele.id}</td>
+                                            <tr key={index+1}>
+                                                 <td>{index}</td>
                                                  <td>{ele.name}</td>
                                                  <td>{ele.project}</td>
                                                  <td>{ele.planned}</td>
@@ -133,7 +129,9 @@ const TodoList = ()=>{
                                                  <td>{ele.start}</td>
                                                  <td>{ele.finish}</td>
                                                  <td><i className="mr-4 fas fa-edit"></i>
-                                                 <i className="fas fa-trash-alt" onClick={()=>deleteHandler(index)} ></i></td>
+                                                 {/* <i className="fas fa-trash-alt" onClick={()=>deleteHandler(index)} ></i    > */}
+                                                 <button className="fas fa-trash-alt btn btn-danger" onClick={()=>deleteHandler(ele.id)}></button>
+                                                 </td>
                                                  
                                            </tr>
                                         )
