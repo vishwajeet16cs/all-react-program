@@ -1,8 +1,10 @@
 import axios from 'axios';
 import React,{useState,useEffect} from 'react';
+import { Link } from 'react-router-dom';//for edit purpous
 const EmployeeList=()=>{
     const url="http://localhost:3002/employee"; 
     const [emplist,updateEmp]=useState([]);
+    const [removeData,setRemoveData] = useState([])
     const getEmp=()=>{
         fetch(url)
         .then(responce=>responce.json()) 
@@ -19,13 +21,21 @@ const EmployeeList=()=>{
 
     //delete  data from json file
     const [message, setMessage] =useState("");
-    const deleteEmp=(empid)=>{
+    const deleteEmp=(emp)=>{
         console.log("delete emp is working")
-               axios.delete("http://localhost:3002/employee/"+empid)
+        console.log(emp)
+               axios.delete("http://localhost:3002/employee/"+emp.id)
        .then(response=>{
-        getEmp();// to reload the list after delete a record
+           console.log("inside then block")
+        //    if(response.data != null){
+        //        alert("book deleted successfully")
+        //    }
+                console.log(emp)
+            setRemoveData(emp)
+            getEmp();// to reload the list after delete a record
             setMessage("Employee info Deleted successfully !")
-       }).catch(error=>{
+       })
+       .catch(error=>{
         setMessage("Error ! Try again later");
        })
 
@@ -33,15 +43,14 @@ const EmployeeList=()=>{
     return(
         <>
         {/* <h5>{JSON.stringify(emplist)}</h5> */}
-        <h4>{message}</h4>
+        {/* <h4>{removeData}</h4> */}
+        {/* <h4>{message}</h4> */}
         <table className="table table-striped table-dark">
             <thead>
                 <tr>
-                    <th>Emp No</th>
-                    <th>Employee Name</th>
-                    <th>Mobile No</th>
-                    <th>Department</th>
-                    <th>Salary</th>
+                    <th>Task</th>
+                    <th>Comment</th>
+                    <th>Edit</th>
                     <th>Delete</th>
                 </tr>
             </thead>
@@ -50,13 +59,13 @@ const EmployeeList=()=>{
                     emplist.map((emp,index)=>{
                             return (
                                 <tr>
-                                    <td>{emp.id}</td>
-                                    <td>{emp.name}</td>
-                                    <td>{emp.mobile}</td>
-                                    <td>{emp.dept}</td>
-                                    <td>{emp.salary}</td>
-                                    <td><button className="btn btn-danger"
-                                     onClick={deleteEmp.bind(this,emp.id)}>
+                                    <td>{emp.taskName}</td>
+                                    <td>{emp.comment}</td>
+                                    <td><Link to={`/${emp.id}editemp`} className='btn btn-info'>Edit</Link></td>
+                                    <td>
+                                        {/* <h6>{emp.id}</h6> */}
+                                        <button className="btn btn-danger"
+                                     onClick={deleteEmp.bind(this,emp)}>
                                          Delete</button></td>
                                 </tr>
                             )
@@ -65,6 +74,9 @@ const EmployeeList=()=>{
                
             </tbody>
         </table>
+        <h1>Deleted data </h1>
+                {/* <h6>{JSON.stringify(removeData)}</h6> */}
+                <h1>{removeData.taskName}</h1>
         
         </>
     )

@@ -1,21 +1,63 @@
 {
   "employee": [
     {
-      "name": "Amarjeet ",
-      "mobile": "989898989",
-      "dept": "civil",
-      "salary": "2000000",
+      "taskName": "sjsjjs",
+      "comment": "jsjsjsj",
+      "id": 1
+    },
+    {
+      "taskName": "good ",
+      "comment": "what do we do",
       "id": 2
     },
     {
-      "name": "vishwa",
-      "mobile": "8809998989",
-      "dept": "cse",
-      "salary": "30000000",
+      "taskName": "hello check",
+      "comment": "jdj jsjsj jsj",
+      "id": 3
+    },
+    {
+      "taskName": "check hello",
+      "comment": "hello people",
+      "id": 4
+    }
+  ],
+  "product": [
+    {
+      "id": 1,
+      "name": "vishwajeet",
+      "email": "vishwajeet@gmail.com",
+      "password": "change",
+      "reEnterPassword": "change"
+    },
+    {
+      "name": "Vishwajeet kumar",
+      "email": "vishwajeetkumarb438@gmail.com",
+      "password": "1234",
+      "reEnterPassword": "1234",
+      "id": 2
+    }
+  ],
+  "login": [
+    {
+      "email": "vi@g.com",
+      "password": "123456",
+      "id": 1
+    },
+    {
+      "email": "v@g.com",
+      "password": "12134",
+      "id": 2
+    },
+    {
+      "email": "v@g.com",
+      "password": "124",
       "id": 3
     }
   ],
-  "product": [],
-  "client": [],
-  "material": []
+  "task": [
+    {
+      "TaskName": "react project",
+      "comment": "boild new react project "
+    }
+  ]
 }
